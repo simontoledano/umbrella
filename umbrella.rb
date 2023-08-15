@@ -9,7 +9,7 @@ pirate_weather_api_key =ENV.fetch("PIRATE_WEATHER_KEY")
 maps_url="https://maps.googleapis.com/maps/api/geocode/json?address=" + user_location + "&key=" + ENV.fetch("GMAPS_KEY")
 
 require "http"
-#this line of code I am a bit unsure of
+#this line of code below I am a bit unsure of
 resp = HTTP.get(maps_url)
 
 raw_response = resp.to_s
