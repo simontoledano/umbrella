@@ -46,5 +46,5 @@ weather_parse_resonse = JSON.parse(weather_raw_response)
 currently_key = weather_parse_resonse.fetch("currently")
 temperature_key = currently_key.fetch("temperature")
 
-temperature_message = "The current temperature in " + user_location + " is " + temperature_key.to_s + "."
+temperature_message = "The current temperature in " + user_location.gsub("%20"," ") + " is " + temperature_key.to_s + "."
 pp temperature_message
