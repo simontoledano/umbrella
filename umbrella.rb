@@ -26,3 +26,13 @@ second_dig = first_dig.fetch("geometry")
 third_dig = second_dig.fetch("location")
 latitude = third_dig.fetch("lat")
 longitude = third_dig.fetch("lng")
+
+#below is http request for the user_location weather 
+
+require "http"
+
+pirate_weather_url = "https://api.pirateweather.net/forecast/" + pirate_weather_api_key + "/" + latitude + "," + longitude
+
+#below is the get request 
+
+x = 
